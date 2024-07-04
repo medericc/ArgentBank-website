@@ -1,23 +1,46 @@
+import React from 'react';
+import Feature from '../components/FeatureItem.jsx';
+import chatIcon from '../img/icon-chat.png';
+import moneyIcon from '../img/icon-money.png';
+import securityIcon from '../img/icon-security.png';
 
-import Hero from '../components/Hero';
-import FeatureItem from '../components/FeatureItem';
+const Home = () => {
+  return (
+    <React.Fragment>
+      <main>
+        <div className="hero">
+          <section className="hero-content">
+            <h2 className="sr-only">Contenu Promu</h2>
+            <p className="subtitle">Pas de frais.</p>
+            <p className="subtitle">Pas de dépôt minimum.</p>
+            <p className="subtitle">Taux d'intérêt élevés.</p>
+            <p className="text">Ouvrez un compte d'épargne chez Argent Bank dès aujourd'hui!</p>
+          </section>
+        </div>
+      </main>
+      <section className="features">
+        <h2 className="sr-only">Caractéristiques</h2>
+        <Feature
+          img={chatIcon}
+          alt="Icône de chat"
+          title="Vous êtes notre priorité n°1"
+          content="Besoin de parler à un représentant? Vous pouvez nous contacter via notre chat 24/7 ou par téléphone en moins de 5 minutes."
+        />
+        <Feature
+          img={moneyIcon}
+          alt="Icône d'argent"
+          title="Plus vous épargnez, plus les taux sont élevés"
+          content="Plus vous épargnez avec nous, plus votre taux d'intérêt sera élevé!"
+        />
+        <Feature
+          img={securityIcon}
+          alt="Icône de sécurité"
+          title="Une sécurité de confiance"
+          content="Nous utilisons le cryptage de pointe pour garantir que vos données et votre argent sont toujours en sécurité."
+        />
+      </section>
+    </React.Fragment>
+  );
+};
 
-const HomePage = () => (
-  <main>
-    <Hero />
-    <section className="features">
-      <h2 className="sr-only">Features</h2>
-      <FeatureItem imgSrc="./img/icon-chat.png" imgAlt="Chat Icon" title="You are our #1 priority">
-        Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes.
-      </FeatureItem>
-      <FeatureItem imgSrc="./img/icon-money.png" imgAlt="Money Icon" title="More savings means higher rates">
-        The more you save with us, the higher your interest rate will be!
-      </FeatureItem>
-      <FeatureItem imgSrc="./img/icon-security.png" imgAlt="Security Icon" title="Security you can trust">
-        We use top of the line encryption to make sure your data and money is always safe.
-      </FeatureItem>
-    </section>
-  </main>
-);
-
-export default HomePage;
+export default Home;

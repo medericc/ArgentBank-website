@@ -1,0 +1,183 @@
+{
+    "clientDetails": [
+        {
+            "lastName" : "Stark",
+            "accounts" : [
+                {
+                    "title":"Argent Bank Checking (x8349)",
+                    "amount": 256.98,
+                    "description":"Available Balance",
+                    "transactions" : [
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        }
+                    ]
+                },
+                {
+                    "title":"Argent Bank Savings (x6712)",
+                    "amount": 678.82,
+                    "description":"Available Balance",
+                    "transactions" : [
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        }
+                    ]
+                },
+                {
+                    "title":"Argent Bank Credit Card (x8349)",
+                    "amount": 184.30,
+                    "description":"View EditForm",
+                    "transactions" : [
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "Argent en Plus",
+                            "trans_amount": 10,
+                            "balance": 150
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "lastName" : "Rogers",
+            "accounts" : [
+                {
+                    "title":"Argent Bank Checking (x6349)",
+                    "amount": 1082.79,
+                    "description":"Available Balance",
+                    "transactions" : [
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        }
+                    ]
+                },
+                {
+                    "title":"Argent Bank Savings (x4712)",
+                    "amount": 8928.42,
+                    "description":"Available Balance",
+                    "transactions" : [
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        }
+                    ]
+                },
+                {
+                    "title":"Argent Bank Credit Card (x6349)",
+                    "amount": 84.30,
+                    "description":"View EditForm",
+                    "transactions" : [
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        },
+                        {
+                            "date": "2024_06_19",
+                            "trans_description": "C.C  Rive Eoile",
+                            "trans_amount": 10,
+                            "balance": 150
+                        }
+                    ]
+                }
+            ]
+        }
+       
+    ]
+}

@@ -1,7 +1,7 @@
 // src/features/userSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const initialState = {
+const initialState = { //co et recup info user
   user: JSON.parse(localStorage.getItem('user')) || null,
   isLoggedIn: !!localStorage.getItem('user'),
 };

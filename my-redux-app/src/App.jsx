@@ -1,22 +1,30 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainLayout from './layouts/MainLayout';
-import HomePage from './pages/HomePage';
-import SignInPage from './pages/SignInPage';
-import UserPage from './pages/UserPage';
-import PrivateRoute from './components/PrivateRoute';
+import Home from './pages/HomePage';
+import SignIn from './pages/SignInPage';
+import Dashboard from './pages/UserPage';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NotFound from './pages/non';
+import ProtectedRoutes from './components/PrivateRoute';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <MainLayout>
+    <React.Fragment>
+      <Router>
+        <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/sign-in" element={<SignInPage />} />
-          <Route path="/user" element={<PrivateRoute element={<UserPage />} />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="*" element={<NotFound />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Route>
         </Routes>
-      </MainLayout>
-    </Router>
+        <Footer />
+      </Router>
+    </React.Fragment>
   );
-}
+};
 
 export default App;

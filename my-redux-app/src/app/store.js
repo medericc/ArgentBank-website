@@ -1,17 +1,26 @@
-// src/app/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from '../features/userSlice'; // Créez ce fichier selon les besoins
+import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import authReducer from './recognize/Slice';
 
-export const store = configureStore({
-  reducer: {
-    user: userReducer, // Reducer pour gérer les informations de l'utilisateur
-    // Ajoutez d'autres reducers au besoin
-  },
-  // Middleware Redux Thunk pour gérer les actions asynchrones
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false, // Désactiver la vérification de sérialisation temporairement
-    }),
+const persistConfig = {
+    key: 'root',
+    storage: AsyncStorage,
+};
+
+const persistedReducer = persistReducer(persistConfig, authReducer);
+
+const store = configureStore({
+    reducer: {
+        auth: persistedReducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
+        }),
 });
 
+export const persistor = persistStore(store);
 export default store;

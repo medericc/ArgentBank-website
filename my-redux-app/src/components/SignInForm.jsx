@@ -1,35 +1,83 @@
-// src/components/SignInForm.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { loginUser } from '../features/userSlice';
+import { userSignin } from '../app/recognize/Action';
+import useAuth from '../hook/useAuth';
+import Error from "./Error";
+import Spinner from './Spinner';
 
 const SignInForm = () => {
-  const dispatch = useDispatch();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+    const { isLoading, error, isConnected } = useAuth()
+    const dispatch = useDispatch();
+    const { register, handleSubmit, setValue, formState: { errors }} = useForm();
+    const navigate = useNavigate();
+    const [rememberMe, setRememberMe] = useState(false);
 
-  const handleSignIn = () => {
-    // Ici, vous devriez implémenter la logique d'appel API pour la connexion utilisateur
-    // Simulons simplement la réussite de la connexion pour l'exemple
-    const user = { username, password, name: 'Tony Jarvis', accounts: [] };
-    dispatch(loginUser(user));
-  };
+    useEffect(() => {
+        const rememberedEmail = localStorage.getItem('rememberedEmail');
+        const rememberedPassword = localStorage.getItem('rememberedPassword');
+        const rememberedRememberMe = localStorage.getItem('rememberedRememberMe');
 
-  return (
-    <form>
-      <div className="input-wrapper">
-        <label htmlFor="username">Username</label>
-        <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </div>
-      <div className="input-wrapper">
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </div>
-      <button type="button" onClick={handleSignIn} className="sign-in-button">
-        Sign In
-      </button>
-    </form>
-  );
+        if (rememberedRememberMe === 'true') {
+            setRememberMe(true);
+        }
+
+        if (rememberedEmail && rememberedPassword && rememberedRememberMe === 'true') {
+            setValue('email', rememberedEmail);
+            setValue('password', rememberedPassword);
+        }
+    }, [setValue]);
+
+    useEffect(() => {
+        if (isConnected) {
+            navigate('/dashboard');
+        }
+    }, [isConnected, navigate]);
+
+    const submitForm = (data) => {
+        dispatch(userSignin({ ...data, rememberMe }));
+        if (rememberMe) {
+            localStorage.setItem('rememberedEmail', data.email);
+            localStorage.setItem('rememberedPassword', data.password);
+            localStorage.setItem('rememberedRememberMe', rememberMe);
+        } else {
+            localStorage.removeItem('rememberedEmail');
+            localStorage.removeItem('rememberedPassword');
+            localStorage.removeItem('rememberedRememberMe');
+        }
+    }
+
+    const handleRememberMeChange = (e) => {
+        setRememberMe(e.target.checked);
+    }
+
+    return (
+        <form onSubmit={handleSubmit(submitForm)}>
+            {error && <Error>{error}</Error>}
+            <div className="input-wrapper">
+                {errors.email && <Error>{errors.email.message}</Error>}
+                <label htmlFor="email">Email</label>
+                <input autoComplete='username' type="email" id="email" name='email' {...register('email', { required: 'email is required' })} />
+            </div>
+            <div className="input-wrapper">
+                {errors.password && <Error>{errors.password.message}</Error>}
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" name='password' {...register('password', { required: 'password is required' })} autoComplete="current-password" />
+            </div>
+            <div className="input-remember">
+                <input type="checkbox" id="remember-me" onChange={handleRememberMeChange} checked={rememberMe} />
+                <label htmlFor="remember-me">Remember me</label>
+            </div>
+            <button 
+                type='submit' 
+                className='sign-in-button' 
+                disabled={ isLoading }
+            >
+                {isLoading ?   <Spinner />: 'Sign In'}
+            </button>
+        </form>
+    );
 };
 
 export default SignInForm;
