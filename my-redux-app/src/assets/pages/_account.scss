@@ -1,0 +1,128 @@
+/* account.scss */
+
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(61, 61, 61);
+    flex-direction: column;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    text-align: left;
+    
+    &-amount {
+        margin: 0;
+        font-size: 25px;
+        font-weight: 500px;
+        color: white;
+    }
+    
+    &-description {
+        margin: 0;
+        color: white;
+        font-size: 12px;
+    }
+    
+    &-title {
+        margin: 0;
+        color: white;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    
+    &-content-wrapper {
+        width: 100%;
+        color: white;
+        flex: 1;
+    }
+    
+    & .edit-button {
+        border-color: #00bc77;
+        background-color: #00bc77;
+        color: #fff;
+        font-weight: bold;
+        padding: 10px;
+    }
+}
+
+.header {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.transaction-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-color: rgb(61, 61, 61);
+    background-color: rgb(61, 61, 61);
+    color: #fff;
+}
+
+.mask-details-button {
+    border-color: rgb(61, 61, 61);
+    background-color: rgb(61, 61, 61);
+}
+
+@media (min-width: 720px) {
+    .account {
+        flex-direction: row;
+    }
+
+    .account-content-wrapper.cta {
+        flex: 0;
+    }
+
+    .transaction-button {
+        width: 200px;
+    }
+}
+
+.account-transactions {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.transaction-details {
+    background-color: #fff;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 1rem;
+}
+
+.thead {
+    color: rgb(61, 61, 61);
+    border-bottom: 1rem solid #fff;
+}
+
+.tbody {
+    color: #fff;
+    background-color: #fff;
+}
+
+tbody tr {
+    height: 3rem;
+    border-bottom: 1rem solid #fff;
+    color: #12002b;
+}
+
+tbody td {
+    height: 1rem;
+    border-bottom: 1rem solid #fff;
+    color: #fff;
+    background-color: #00bc77;
+}
