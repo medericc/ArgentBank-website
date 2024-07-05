@@ -1,5 +1,5 @@
 html {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -76,7 +76,7 @@ html {
   }
   
   .hero {
-    background-image: url('./images/bank-tree.webp');
+    background-image: url('../img/bank-tree.jpeg');
     background-position: 0 -50px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -410,8 +410,7 @@ html {
     .fa-arrow-down{
       color: #00bc77;;
     }
-  
-    /**error page*/
+
     .main-error{
       display: flex;
       flex-direction: column;
