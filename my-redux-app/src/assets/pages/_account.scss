@@ -1,5 +1,3 @@
-/* account.scss */
-
 .account {
     display: flex;
     justify-content: space-between;
@@ -9,20 +7,20 @@
     padding: 1.5rem;
     box-sizing: border-box;
     text-align: left;
-    
+
     &-amount {
         margin: 0;
         font-size: 25px;
         font-weight: 500px;
         color: white;
     }
-    
+
     &-description {
         margin: 0;
         color: white;
         font-size: 12px;
     }
-    
+
     &-title {
         margin: 0;
         color: white;
@@ -30,13 +28,13 @@
         font-size: 1rem;
         font-weight: normal;
     }
-    
+
     &-content-wrapper {
         width: 100%;
         color: white;
         flex: 1;
     }
-    
+
     & .edit-button {
         border-color: #00bc77;
         background-color: #00bc77;
@@ -112,6 +110,17 @@
 .tbody {
     color: #fff;
     background-color: #fff;
+}
+
+.transaction-detail {
+    color: #fff;
+    background-color: #00bc77;
+    padding: 1rem;
+}
+
+.transaction-detail p {
+    margin: 0.5rem 0;
+    color:white;
 }
 
 tbody tr {

@@ -4,100 +4,161 @@
             "lastName" : "Stark",
             "accounts" : [
                 {
-                    "title":"Argent Bank Checking (x8349)",
+                    "title": "Argent Bank Checking (x8349)",
                     "amount": 256.98,
-                    "description":"Available Balance",
-                    "transactions" : [
+                    "description": "Available Balance",
+                    "transactions": [
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         }
                     ]
                 },
                 {
-                    "title":"Argent Bank Savings (x6712)",
+                    "title": "Argent Bank Savings (x6712)",
                     "amount": 678.82,
-                    "description":"Available Balance",
-                    "transactions" : [
+                    "description": "Available Balance",
+                    "transactions": [
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         }
                     ]
                 },
                 {
-                    "title":"Argent Bank Credit Card (x8349)",
+                    "title": "Argent Bank Credit Card (x8349)",
                     "amount": 184.30,
-                    "description":"View EditForm",
-                    "transactions" : [
+                    "description": "View EditForm",
+                    "transactions": [
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         },
                         {
                             "date": "2024_06_19",
                             "trans_description": "Argent en Plus",
                             "trans_amount": 10,
-                            "balance": 150
+                            "balance": 150,
+                            "details": {
+                                "transaction_type": "Electronic",
+                                "category": "Food",
+                                "note": "Lorem ipsum"
+                            }
                         }
                     ]
                 }
             ]
         },
+        
         {
             "lastName" : "Rogers",
             "accounts" : [
